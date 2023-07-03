@@ -15,6 +15,7 @@ return {
         prev = "<M-[>",
         dismiss = "<C-]>",
       },
+
     },
     panel = { enabled = false },
     copilot_node_command = "node", -- Node.js version must be > 16.x
@@ -22,4 +23,4 @@ return {
   },
   event = "User AstroFile",
 }
---
+

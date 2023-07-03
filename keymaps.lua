@@ -27,6 +27,8 @@ function M.mappings(maps)
 
   maps.v["K"] = { ":move '<-2<CR>gv-gv", desc = "Move line up" }
   maps.v["J"] = { ":move '>+1<CR>gv-gv", desc = "Move line down" }
+  maps.i["jk"] = { "<ESC>", desc = "Exit to normal mode" }
+  maps.v["."] = { ":normal! .<CR>", desc = "Exit to normal mode" }
 
   if is_available "nvim-dap-ui" then
     maps.n["<leader>dU"] = {
@@ -334,7 +336,6 @@ function M.mappings(maps)
 
   -- 在visual mode 里粘贴不要复制
   maps.n["x"] = { '"_x', desc = "Cut without copy" }
-
   -- 分屏快捷键
   maps.n["<leader>w"] = { desc = "󱂬 Window" }
   maps.n["<leader>ww"] = { "<cmd><cr>", desc = "Save" }
